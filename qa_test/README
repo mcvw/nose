@@ -1,0 +1,61 @@
+# Title : intu Digital QA Test
+# Author: Michael Walden
+# File  : README
+# Date  : 26Jun2017
+
+# Description: This README contains information relating to the intu Digital QA Test.
+
+Files included:
+===============
+intu_test.py
+intu_functions.py
+intu_constants.py
+
+
+Description:
+============
+The chosen implmentation for this assignment utilizes the Python version of the Selenium Webdriver for use with the Chrome browser via the Nose test framework and therefore requires that the following components are installed:
+- Python (version 3)
+- Nose
+- Selenium bindings for Python
+- Chrome Webdriver
+
+Installation:
+=============
+Installation for each component is listed below:
+    + Python
+    Download and install Python v3.x
+    Validate the install via a command window
+    > python3 -V
+
+    + Python Bindings for Selenium (https://pypi.python.org/pypi/selenium)
+    Download and install the selenium webdriver (via pip3)
+    > pip3 install -U selenium
+
+    + Nose framework
+    > pip3 install -U nose
+    
+    To verify the Selenium and Nose installations enter the following via a command window
+    > pip3 list
+
+    + Selenium browser driver (https://sites.google.com/a/chromium.org/chromedriver/downloads)
+    Download the chromedriver and unzip into a location that is included on your current filepath. Alternatively edit your filepath to include this location, or copy the chromedriver file into either the /usr/bin or /usr/local/bin directory
+
+    NOTE: You may need to chamge the permissions of the chromedriver file so it's executable by all users
+
+Execution:
+==========
+Unzip all files into a new directory. From the directory containing the files stated above enter the following via a command window
+    > nosetests
+
+For a more verbose execution use the following command
+    > nosetests -v intu_test.py
+    
+    NOTE: For more information on the nose framework go to https://nose.readthedocs.io/en/latest/index.html
+
+Additionally, all unit test cases have been tagged a priority level (from 1 to 3 - where 3 being lowest priority). To run test cases tagged with a priority of 3 use the following command
+    > nosetests -a priority=3
+
+Considerations/Known issues:
+============================
+At present the login functionality is unavailable and the following text is displayed: "We’re currently giving our account pages a well-deserved makeover, which means you won’t be able to access your account"
